@@ -1,0 +1,26 @@
+{{>trainermenu id="dashboard"}}
+
+
+<section class="ui grey center aligned inverted segment">
+  <h3 class="ui header">
+    Welcome Trainer
+  </h3>
+</section>
+{{#each member}}
+  <section class='ui raised segment'>
+<h3 class="ui header">
+  {{name}}
+    </h2>
+    <p>
+      Number of Assessments
+      {{assessments.length}}
+    </p>
+    <a href="/memberlist/{{id}}" class="ui icon button">
+    <i class="blue icon folder open"></i>
+    </a>
+    <a href="/trainerdashboard/deletemember/{{id}}" class="ui icon button">
+    <i class="red icon trash"></i>
+    </a>    
+     
+</section>
+{{/each}}

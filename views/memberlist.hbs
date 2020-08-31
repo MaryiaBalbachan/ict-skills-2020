@@ -1,0 +1,84 @@
+{{>trainermenu}}
+
+<section class="ui grey inverted segment">
+<header class="ui header">
+  <div class="ui horizontal segments">
+    <div class="ui center aligned segments">
+      {{member.name}}
+    </div>
+    <div class="ui center aligned segments">
+      <i class="big red heartbeat icon"></i>
+    </div>
+    <div class="ui center aligned segments">
+      <i class="big red heartbeat icon"></i>
+    </div>
+    <div class="ui center aligned segments">
+      <i class="big red heartbeat icon"></i>
+    </div>    
+  </div>
+  </header>
+  {{#each member.assessments}}
+  <table class="ui center aligned celled table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Chest</th>
+      <th>Thigh</th>
+      <th>Upper arm</th>
+      <th>Waist</th>
+      <th>Hips</th>
+      <th>Trend</th>
+      <th>Comment</th>
+      <th>Delete Assessment</th>
+    </tr>
+  </thead>
+  <tbody>    
+    <tr>
+      <td>
+        {{date}}
+      </td>
+      <td>
+        {{weight}}
+      </td>
+      <td>
+        {{chest}}
+      </td>
+      <td>
+        {{thigh}}
+      </td>
+      <td>
+        {{upperarm}}
+      </td>
+      <td>
+        {{waist}}
+      </td>
+      <td>
+        {{hips}}
+      </td>
+      <td>
+        Trend
+      </td>
+      <td>
+        Comment
+      </td>
+      <td>
+      <a class="ui icon button">
+        <i class="red icon trash"></i>        
+        </a>
+      </td>
+    </tr>   
+    </tbody>    
+</table>  
+  
+  <form class="ui secondary equal width form" action="/trainerdashboard/addcomment/{{../member.id}}/{{id}}" method="POST">
+    <div class="field">
+      <label>Trainer Comments</label>
+      <input type="text" name="comment" placeholder="Comments">
+    </div>
+    <button class="ui button" type="submit">
+      Submit
+    </button>
+  </form>
+  {{/each}}
+</section>
