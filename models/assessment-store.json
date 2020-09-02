@@ -1,0 +1,76 @@
+{
+  "assessmentCollection": [
+    {
+      "memberid": "01",
+      "id": "02",
+      "date": "2020-08-31 11:32:34",
+      "weight": "150",
+      "chest": "100",
+      "thigh": "70",
+      "upperarm": "40",
+      "waist": "70",
+      "hips": "100",
+      "trend": "",
+      "comment": ""
+    },
+    {
+      "memberid": "01",
+      "id": "03",
+      "date": "2020-08-25 11:32:34",
+      "weight": "150",
+      "chest": "100",
+      "thigh": "70",
+      "upperarm": "40",
+      "waist": "70",
+      "hips": "100",
+      "trend": "",
+      "comment": ""
+    },
+    {
+      "memberid": "05",
+      "id": "04",
+      "date": "2020-08-23 11:32:34",
+      "weight": "150",
+      "chest": "100",
+      "thigh": "70",
+      "upperarm": "40",
+      "waist": "70",
+      "hips": "100",
+      "trend": "",
+      "comment": "blah"
+    },
+    {
+      "memberid": "01",
+      "id": "23d42b60-ec44-11ea-bca4-e9e0ab24c122",
+      "date": "2020-09-01 11:13:19",
+      "weight": "",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": ""
+    },
+    {
+      "memberid": "01",
+      "id": "3e661470-ec44-11ea-bca4-e9e0ab24c122",
+      "date": "2020-09-01 11:14:03",
+      "weight": "",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": ""
+    },
+    {
+      "memberid": "12bb31c0-ec53-11ea-b56d-f3ba53437cc2",
+      "id": "3b68e580-ecfe-11ea-b8f3-d7abf608bd26",
+      "date": "2020-09-02 09:25:25",
+      "weight": "45",
+      "chest": "70",
+      "thigh": "50",
+      "upperarm": "20",
+      "waist": "50",
+      "hips": "70"
+    }
+  ]
+}

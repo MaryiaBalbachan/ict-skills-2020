@@ -17,7 +17,7 @@
     </div>    
   </div>
   </header>
-  {{#each member.assessments}}
+  {{#each assessment}}
   <table class="ui center aligned celled table">
   <thead>
     <tr>
@@ -29,8 +29,7 @@
       <th>Waist</th>
       <th>Hips</th>
       <th>Trend</th>
-      <th>Comment</th>
-      <th>Delete Assessment</th>
+      <th>Comment</th>      
     </tr>
   </thead>
   <tbody>    
@@ -57,21 +56,16 @@
         {{hips}}
       </td>
       <td>
-        Trend
+        
       </td>
       <td>
-        Comment
-      </td>
-      <td>
-      <a class="ui icon button">
-        <i class="red icon trash"></i>        
-        </a>
-      </td>
+        {{comment}}
+      </td>      
     </tr>   
     </tbody>    
 </table>  
   
-  <form class="ui secondary equal width form" action="/trainerdashboard/addcomment/{{../member.id}}/{{id}}" method="POST">
+  <form class="ui secondary equal width form" action="/trainerdashboard/{{memberid}}/addcomment/{{id}}" method="POST">
     <div class="field">
       <label>Trainer Comments</label>
       <input type="text" name="comment" placeholder="Comments">

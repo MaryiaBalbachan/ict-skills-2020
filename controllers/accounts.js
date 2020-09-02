@@ -13,6 +13,7 @@ const accounts = {
     };
     response.render('index', viewData);
   },
+  
 
   login(request, response) {
     const viewData = {
@@ -20,6 +21,7 @@ const accounts = {
     };
     response.render('login', viewData);
   },
+  
 
   logout(request, response) {
     response.cookie('member', '');
@@ -54,7 +56,7 @@ const accounts = {
     else if(trainer&&password){
       response.cookie('trainer', trainer.email);
       logger.info(`logging in ${trainer.email}`);
-      response.redirect('./trainerdashboard');
+      response.redirect('/trainerdashboard');
     }
     else {
       response.redirect('/login');
@@ -67,7 +69,7 @@ const accounts = {
   },
   
   getCurrentTrainer(request){
-    const trainerEmail=request.cookies.member;
+    const trainerEmail=request.cookies.trainer;
     return trainerStore.getTrainerByEmail(trainerEmail);
   }
 };

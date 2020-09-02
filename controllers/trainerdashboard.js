@@ -2,6 +2,7 @@
 
 const logger = require("../utils/logger");
 const memberStore=require("../models/member-store.js");
+const assessmentStore=require("../models/assessment-store.js");
 const uuid=require('uuid');
 const accounts=require('./accounts.js');
 
@@ -18,19 +19,42 @@ const trainerdashboard = {
     response.render("trainerdashboard", viewData);
   },
   
-  addComment(request,response){
-    const comment=request.body.comment;
-    const memberId=request.params.memberid;
-    const member=memberStore.getMember(memberId);
-    memberStore.addComment(comment,member,request.params.assessmentId);
-    response.redirect('./listassessments/'+request.params.memberId)
-  },
+  
+  
+  
+  // addComment(request,response){
+  //   const comment=request.body.comment;
+  //   const memberId=request.params.memberid;
+  //   const member=memberStore.getMember(memberId);
+  //   memberStore.addComment(comment,member,request.params.assessmentId);
+  //   response.redirect('./listassessments/'+request.params.memberId)
+  // },
   
   deleteMember(request,response){
     const memberId=request.params.id;
     memberStore.removeMember(memberId);
     response.redirect('/trainerdashboard');
   },
+  
+  addComment(request,response){
+    const memberId=request.params.memberid;
+    const assessmentId=request.params.id;
+    const assessment=assessmentStore.getAssessment(assessmentId);
+    logger.info("comments being added");
+    assessment.comment=request.body.comment;
+    response.redirect('/memberlist/'+memberId);
+    
+  }
+  
+  // addComment(request,response){
+  //   const comment=request.body.comment;
+  //   const assessmentId=request.params.id;
+  //   //const member=memberStore.getMember(memberId);
+  //   assessmentStore.addComment(comment,assessmentId);
+  //   response.redirect('memberlist');
+  // },
+  
+  
 };
 
 module.exports = trainerdashboard;
