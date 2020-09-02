@@ -1,130 +1,15 @@
 {
   "memberCollection": [
     {
-      "id": "01",
-      "name": "Homer Simpson",
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "address": "Evergreen Terrace",
-      "gender": "Male",
-      "height": "170",
-      "startingweight": "150",
-      "assessments": [
-        {
-          "id": "02",
-          "date": "15/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "id": "03",
-          "date": "15/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "id": "04",
-          "date": "15/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        }
-      ]
-    },
-    {
       "id": "05",
       "name": "Bart Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
       "address": "Evergreen Terrace",
       "gender": "Male",
-      "height": "120",
+      "height": "1.45",
       "startingweight": "100",
-      "assessments": [
-        {
-          "id": "06",
-          "date": "11/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "id": "07",
-          "date": "01/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "id": "08",
-          "date": "18/09/2020",
-          "weight": "150",
-          "chest": "100",
-          "thigh": "70",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "100",
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "id": "3ba78ab0-ea15-11ea-82f2-2190358e688a",
-          "weight": "120",
-          "chest": "90",
-          "thigh": "50",
-          "upperarm": "40",
-          "waist": "70",
-          "hips": "70"
-        }
-      ]
-    },
-    {
-      "name": "Lisa Simpson",
-      "gender": "f",
-      "email": "lisa@simpson.com",
-      "password": "secret",
-      "address": "",
-      "height": "",
-      "startingweight": "",
-      "id": "8c2fa730-eb6c-11ea-bfdc-255ceb4a8c32",
-      "assessments": [
-        {
-          "id": "b2c60a60-eb6c-11ea-bfdc-255ceb4a8c32",
-          "weight": "50",
-          "chest": "77",
-          "thigh": "88",
-          "upperarm": "88",
-          "waist": "55",
-          "hips": "76"
-        }
-      ]
+      "assessments":[]
     },
     {
       "name": "Lisa Simpson",
@@ -132,9 +17,20 @@
       "email": "lisa@simpson.com",
       "password": "secret",
       "address": "evergreen",
-      "height": "1.4",
-      "startingweight": "50",
-      "id": "9be5deb0-eb6c-11ea-bfdc-255ceb4a8c32",
+      "height": "1.45",
+      "startingweight": "45",
+      "id": "12bb31c0-ec53-11ea-b56d-f3ba53437cc2",
+      "assessments": []
+    },
+    {
+      "name": "Maggie Simpson",
+      "gender": "female",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "address": "734 Evergreen Terrace",
+      "height": "1.0",
+      "startingweight": "25",
+      "id": "9148f4a0-ecfd-11ea-8299-6b75aa16923a",
       "assessments": []
     }
   ]

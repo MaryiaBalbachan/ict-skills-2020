@@ -2,6 +2,7 @@
 
 const logger=require('../utils/logger');
 const memberStore=require('../models/member-store.js');
+const assessmentStore=require("../models/assessment-store.js");
 
 const memberlist={
   
@@ -11,17 +12,19 @@ const memberlist={
     const viewData={
       title:'memberList',
       member:memberStore.getMember(memberId),
+      assessment:assessmentStore.getMemberAssessments(memberId),
     };
     response.render('memberlist',viewData);
   },
   
-  // deleteAssessment(request,response){
-  //   const memberId=request.params.id;
-  //   const assessmentId=request.params.assessmentid;
-  //   logger.debug(`deleting assessment ${assessmentId} from Memberlist ${memberId}`);
-  //   memberStore.removeAssessment(memberId, assessmentId);
-  //   response.redirect('/memberlist/'+memberId);
-  // },
+//   addComment(request,response){
+//     const comment=request.body.comment;
+//     const assessmentId=request.params.id;
+//     //const member=memberStore.getMember(memberId);
+//     assessmentStore.addComment(comment,assessmentId);
+//     response.redirect('memberlist');
+//   },
+  
   
   
 };
