@@ -25,30 +25,23 @@ const assessmentStore={
     this.store.save();
   },
   
+  
+  
   removeAssessment(id) {
     const assessment = this.getAssessment(id);
     this.store.remove(this.collection, assessment);
     this.store.save();
-  },
+  },  
   
-  // addComment(id){
-  //   this.store.add(this.collection, id);
-  //   this.store.save();
-  // }
   
   addComment(comment,assessmentId){
     const assessment=this.getAssessment(assessmentId);
     assessment.comment=comment;
     this.store.save();
+    logger.info("attempting to save to store");
     
   },
     
-//   },
-//   // addAssessment(id,) {
-  //   const member= this.getMember(id.id);
-  //   member.assessments.unshift(assessment);
-  //   this.store.save();
-  // },
 
 
 };

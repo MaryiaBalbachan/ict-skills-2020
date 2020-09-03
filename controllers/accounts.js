@@ -46,14 +46,15 @@ const accounts = {
 
   authenticate(request, response) {
     const member = memberStore.getMemberByEmail(request.body.email);
-    const password=memberStore.getMemberPassword(request.body.password);
-    const trainer=trainerStore.getTrainerPassword(request.body.password);
-    if (member&&password) {
+    const memberpassword=memberStore.getMemberPassword(request.body.password);
+    const trainer = trainerStore.getTrainerByEmail(request.body.email);
+    const trainerpassword=trainerStore.getTrainerPassword(request.body.password);
+    if (member&&memberpassword) {
       response.cookie('member', member.email);
       logger.info(`logging in ${member.email}`);
       response.redirect('/dashboard');
     } 
-    else if(trainer&&password){
+    else if(trainer&&trainerpassword){
       response.cookie('trainer', trainer.email);
       logger.info(`logging in ${trainer.email}`);
       response.redirect('/trainerdashboard');

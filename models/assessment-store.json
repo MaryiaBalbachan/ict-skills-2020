@@ -11,7 +11,7 @@
       "waist": "70",
       "hips": "100",
       "trend": "",
-      "comment": ""
+      "comment": "Welcome!"
     },
     {
       "memberid": "01",
@@ -24,7 +24,7 @@
       "waist": "70",
       "hips": "100",
       "trend": "",
-      "comment": ""
+      "comment": "Well done! Keep it up!"
     },
     {
       "memberid": "05",
@@ -37,7 +37,7 @@
       "waist": "70",
       "hips": "100",
       "trend": "",
-      "comment": "blah"
+      "comment": "good job!"
     },
     {
       "memberid": "01",
@@ -71,6 +71,58 @@
       "upperarm": "20",
       "waist": "50",
       "hips": "70"
+    },
+    {
+      "memberid": "856f9dd0-ed2c-11ea-b5a7-39b36da5bff2",
+      "id": "52085350-ed2d-11ea-b5a7-39b36da5bff2",
+      "date": "2020-09-02 15:02:29",
+      "weight": "50",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": "",
+      "trend": "",
+      "comment": ""
+    },
+    {
+      "memberid": "856f9dd0-ed2c-11ea-b5a7-39b36da5bff2",
+      "id": "dfd23120-edd6-11ea-83ab-e3e6368c4567",
+      "date": "2020-09-03 11:16:12",
+      "weight": "49",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": "",
+      "trend": "",
+      "comment": ""
+    },
+    {
+      "memberid": "856f9dd0-ed2c-11ea-b5a7-39b36da5bff2",
+      "id": "e5cfda50-edd6-11ea-83ab-e3e6368c4567",
+      "date": "2020-09-03 11:16:22",
+      "weight": "51",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": "",
+      "trend": "",
+      "comment": ""
+    },
+    {
+      "memberid": "65551dd0-edd7-11ea-83ab-e3e6368c4567",
+      "id": "762af620-edd7-11ea-83ab-e3e6368c4567",
+      "date": "2020-09-03 11:20:24",
+      "weight": "57",
+      "chest": "",
+      "thigh": "",
+      "upperarm": "",
+      "waist": "",
+      "hips": "",
+      "trend": "",
+      "comment": ""
     }
   ]
 }

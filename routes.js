@@ -15,7 +15,7 @@ router.get("/about", about.index);
 //router.get("/",dashboard.index);
 
 router.get("/profile", profile.index);
-router.post("/profile/updateprofile", profile.updateProfile);
+router.post("/profile/updateprofile", dashboard.updateMember);
 
 router.get("/dashboard", dashboard.index);
 router.get("/trainerdashboard", trainerdashboard.index);
