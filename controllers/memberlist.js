@@ -3,6 +3,7 @@
 const logger=require('../utils/logger');
 const memberStore=require('../models/member-store.js');
 const assessmentStore=require("../models/assessment-store.js");
+const analytics=require("../utils/analytics.js")
 
 const memberlist={
   
@@ -13,17 +14,13 @@ const memberlist={
       title:'memberList',
       member:memberStore.getMember(memberId),
       assessment:assessmentStore.getMemberAssessments(memberId),
+      bmi:analytics.bmi(memberId),  
+      bmiCategory:analytics.bmiCategory(memberId),
     };
     response.render('memberlist',viewData);
   },
   
-//   addComment(request,response){
-//     const comment=request.body.comment;
-//     const assessmentId=request.params.id;
-//     //const member=memberStore.getMember(memberId);
-//     assessmentStore.addComment(comment,assessmentId);
-//     response.redirect('memberlist');
-//   },
+
   
   
   

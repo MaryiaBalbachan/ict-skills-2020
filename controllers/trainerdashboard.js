@@ -7,6 +7,7 @@ const uuid=require('uuid');
 const accounts=require('./accounts.js');
 
 
+
 const trainerdashboard = {
   
   index(request, response) {
@@ -14,21 +15,12 @@ const trainerdashboard = {
     const viewData = {
       title: "Trainer Dashboard",
       member:memberStore.getAllMembers(),
+      
     };
     logger.info("about to render",memberStore.getAllMembers());
     response.render("trainerdashboard", viewData);
-  },
-  
-  
-  
-  
-  // addComment(request,response){
-  //   const comment=request.body.comment;
-  //   const memberId=request.params.memberid;
-  //   const member=memberStore.getMember(memberId);
-  //   memberStore.addComment(comment,member,request.params.assessmentId);
-  //   response.redirect('./listassessments/'+request.params.memberId)
-  // },
+  },  
+ 
   
   deleteMember(request,response){
     const memberId=request.params.id;
@@ -41,18 +33,14 @@ const trainerdashboard = {
     const assessmentId=request.params.id;
     const assessment=assessmentStore.getAssessment(assessmentId);
     logger.info("comments being added");
-    assessment.comment=request.body.comment;
+    const comment=request.body.comment;
+    assessmentStore.addComment(comment, assessmentId)
+    logger.info("saving to assessmentStore");
     response.redirect('/memberlist/'+memberId);
     
   }
   
-  // addComment(request,response){
-  //   const comment=request.body.comment;
-  //   const assessmentId=request.params.id;
-  //   //const member=memberStore.getMember(memberId);
-  //   assessmentStore.addComment(comment,assessmentId);
-  //   response.redirect('memberlist');
-  // },
+  
   
   
 };

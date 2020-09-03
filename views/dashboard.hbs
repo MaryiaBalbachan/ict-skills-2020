@@ -2,25 +2,7 @@
 
 
 <section class="ui grey inverted segment">
-  <div class="ui horizontal segments">
-      <div class="ui teal center aligned segment">
-        {{member.name}}
-      </div>
-      <div class="ui teal center aligned segment">
-        <i class="big red heartbeat icon"></i> 
-        <h1>
-          {{bmi}}
-        </h1>
-      </div>
-      <div class="ui teal center aligned segment">        
-        <i class="big green thumbs up icon"></i>
-        <h3>IDEAL WEIGHT INDICATOR</h3>        
-      </div>
-      <div class="ui teal center aligned segment">        
-        <i class="big red user doctor icon"></i>        
-      </div>
-    </div>
-  </header>
+  {{>analytics}}
   {{>listassessments}}
   {{>addassessment}}
 </section>

@@ -4,6 +4,7 @@ const _=require('lodash');
 const JsonStore=require('./json-store');
 const logger=require('../utils/logger');
 
+
 const memberStore={
   
   store: new JsonStore('./models/member-store.json', {memberCollection:[]}),
@@ -37,6 +38,16 @@ const memberStore={
     this.store.save();
   },
   
+  updateMember(member, updateProfile){
+    member.name=updateProfile.name;
+    member.gender=updateProfile.gender;
+    member.email=updateProfile.email;
+    member.password=updateProfile.password;
+    member.address=updateProfile.address;
+    member.height=updateProfile.height;
+    member.startingweight=updateProfile.startingweight;
+    this.store.save();
+  }
 };
 
 
