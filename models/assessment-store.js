@@ -25,7 +25,10 @@ const assessmentStore={
     this.store.save();
   },
   
-  
+  assessmentCount(memberid){
+    return assessmentStore.getMemberAssessments(memberid).length; 
+    
+  },
   
   removeAssessment(id) {
     const assessment = this.getAssessment(id);
@@ -41,9 +44,6 @@ const assessmentStore={
     logger.info("attempting to save to store");
     
   },
-    
-
-
 };
 
 module.exports=assessmentStore;

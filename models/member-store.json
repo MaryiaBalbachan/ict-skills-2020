@@ -1,10 +1,6 @@
 {
   "memberCollection": [
     {
-      "id": "9148f4a0-ecfd-11ea-8299-6b75aa16923a",
-      "assessments": []
-    },
-    {
       "name": "Homer Simpson",
       "gender": "male",
       "email": "homer@simpson.com",
@@ -16,25 +12,6 @@
       "assessments": []
     },
     {
-      "id": "f27e9a10-ed19-11ea-a754-65446788380f",
-      "assessments": []
-    },
-    {
-      "name": "Bart Simpson",
-      "gender": "Male",
-      "email": "bart@simpson.com",
-      "password": "secret",
-      "address": "734 Evergreen Terrace",
-      "height": "1.45",
-      "startingweight": "50",
-      "id": "856f9dd0-ed2c-11ea-b5a7-39b36da5bff2",
-      "assessments": []
-    },
-    {
-      "id": "9449dbb0-edc5-11ea-9e7b-e3a77e4a161b",
-      "assessments": []
-    },
-    {
       "name": "Maryia",
       "gender": "F",
       "email": "maryia@simpson.com",
@@ -43,6 +20,28 @@
       "height": "1.65",
       "startingweight": "57",
       "id": "65551dd0-edd7-11ea-83ab-e3e6368c4567",
+      "assessments": []
+    },
+    {
+      "name": "Bartholomew Simpson",
+      "gender": "m",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "address": "credan",
+      "height": "1.6",
+      "startingweight": "55",
+      "id": "dded91a0-ede1-11ea-b5a1-311aefd8b3db",
+      "assessments": []
+    },
+    {
+      "name": "Sideshow Bob",
+      "gender": "m",
+      "email": "sideshow@bob",
+      "password": "secret",
+      "address": "springfield",
+      "height": "1.80",
+      "startingweight": "60",
+      "id": "46abead0-eeb3-11ea-9a03-631cda8721d0",
       "assessments": []
     }
   ]

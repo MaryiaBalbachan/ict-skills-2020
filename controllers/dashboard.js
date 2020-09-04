@@ -12,23 +12,21 @@ const analytics=require("../utils/analytics.js");
 
 const dashboard = {
   index(request, response) {
-    const loggedInMember=accounts.getCurrentMember(request);
-    //const bmi=analytics.bmi(loggedInMember.id);
+    const loggedInMember=accounts.getCurrentMember(request);    
     logger.info("dashboard rendering");
     const viewData = {
       title: "Dashboard",
-      assessment:assessmentStore.getMemberAssessments(loggedInMember.id),
+      assessment:assessmentStore.getMemberAssessments(loggedInMember.id).reverse(),
       member:memberStore.getMember(loggedInMember.id),
       bmi:analytics.bmi(loggedInMember.id),  
       bmiCategory:analytics.bmiCategory(loggedInMember.id),
       isIdealBodyWeight:analytics.isIdealBodyWeight(loggedInMember.id),
-      
+      trend:analytics.trend(loggedInMember.id),
     };
     logger.info("about to render",memberStore);
     response.render("dashboard", viewData);
   },
   
-
   
     addAssessment(request,response){      
       const date=new Date();
@@ -60,24 +58,7 @@ const dashboard = {
     response.redirect('/dashboard');
     
   },
-    updateMember(request,response){
-    const member=accounts.getCurrentMember(request);
-    const memberId=request.params.id;
-    const updateProfile={
-      memberid:member.id,
-      name:request.body.name,
-      gender:request.body.gender,
-      email: request.body.email,
-      password:request.body.password,
-      address:request.body.address,
-      height:request.body.height,
-      startingweight:request.body.startingweight      
-    }
-    memberStore.updateMember(member, updateProfile);
-    logger.info(updateProfile);
-    response.redirect('/profile');   
-    
-  },
+   
   
 };
   
