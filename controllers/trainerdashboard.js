@@ -12,12 +12,15 @@ const trainerdashboard = {
   
   index(request, response) {
     logger.info("trainer dashboard rendering");
+    const memberId=request.params.id;
     const viewData = {
       title: "Trainer Dashboard",
       member:memberStore.getAllMembers(),
+      assessmentCount:assessmentStore.assessmentCount(memberId),
       
     };
-    logger.info("about to render",memberStore.getAllMembers());
+    logger.info("about to render",memberStore.getAllMembers()+viewData);
+    //logger.info(assessmentCount);
     response.render("trainerdashboard", viewData);
   },  
  
@@ -39,9 +42,7 @@ const trainerdashboard = {
     response.redirect('/memberlist/'+memberId);
     
   }
-  
-  
-  
+    
   
 };
 

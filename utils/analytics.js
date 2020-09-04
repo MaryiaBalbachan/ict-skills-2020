@@ -11,9 +11,9 @@ const analytics={
   bmi(id) {
     const member = memberStore.getMember(id);
     const assessments = assessmentStore.getMemberAssessments(id);
-    if (assessments.length === 0) {
+    if (assessments.length <1) {
       const bmi = member.startingweight/((member.height)*(member.height));
-      return Math.round(bmi * 100) / 100;
+      return Math.round(bmi);
     }
     
     else {
@@ -44,29 +44,75 @@ const analytics={
         }
     },
   
+  trend(id){
+    const member=memberStore.getMember(id);
+    const assessments=assessmentStore.getMemberAssessments(id);    
+    let trend=true;
+    if(assessments.length>1){
+      let weight1=parseInt(assessments[assessments.length-2].weight)
+      logger.info("weight1 "+weight1)          
+      let weight2=parseInt(assessments[assessments.length-1].weight)
+      logger.info("weight2 "+weight2)
+      trend=weight1>weight2      
+      //trend=parseInt(assessments[assessments.length-2].weight)>parseInt(assessments[assessments.length-1].weight)
+      logger.info("checking trend "+trend);
+    }
+     
+    
+  },
+  
   isIdealBodyWeight(id){
     const member=memberStore.getMember(id);
     const assessments=assessmentStore.getMemberAssessments(id);
     const heightInInches = member.height * 39.37;
-    let weight=member.weight;
-    let idealWeightM = 50 + ((heightInInches - 60) * 2.3);
-    let idealWeightF = 45.5 + ((heightInInches - 60) * 2.3);
+    const idealWeightM = 50 + ((heightInInches - 60) * 2.3);
+    logger.info("ideal weight m "+idealWeightM);
+    const idealWeightF = 45.5 + ((heightInInches - 60) * 2.3);
+    logger.info("ideal weight f "+idealWeightF);
+    logger.info("height"+heightInInches);
+    if (assessments.length<1){
+    const weight=member.startingWeight;
+    logger.info("weight "+weight);
+    
     if ((heightInInches <= 60) && (member.gender.toUpperCase()==="M)" && (weight >= 49) && (weight <=51))) {
+      logger.info("true");
+      
             return true;
         } else if ((heightInInches <= 60) && (member.gender.toUpperCase()==="F") && (weight > 44) && (weight < 46)) {
+          logger.info("true");           
             return true;
-        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 1.0) && (weight < idealWeightM + 1.0)) {
+        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 2) && (weight < idealWeightM + 2)) {
+          logger.info("true");          
             return true;
-        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 1.0) && (weight < idealWeightF + 1.0)) {
+        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 2) && (weight < idealWeightF + 2)) {
+          logger.info("true");           
             return true;       
         } else {
+          logger.info("false");
             return false;
         }
     }
-
-    
+    else{
+      const weight=assessments[assessments.length-1].weight;
+      logger.info("barts weight"+weight);
+       if ((heightInInches <= 60) && (member.gender.toUpperCase()==="M)" && (weight >= 49) && (weight <=51))) {
+      logger.info("true");         
+            return true;
+        } else if ((heightInInches <= 60) && (member.gender.toUpperCase()==="F") && (weight > 44) && (weight < 46)) {
+          logger.info("true");
+            return true;
+        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 2) && (weight < idealWeightM + 2)) {
+          logger.info("true");
+            return true;
+        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 2) && (weight < idealWeightF + 2)) {
+          logger.info("true");  
+            return true;       
+        } else {
+          logger.info("false");
+            return false;
+        }      
+    }
   }
-
-
+  }
 
 module.exports=analytics;
