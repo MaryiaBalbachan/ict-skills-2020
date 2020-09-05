@@ -11,17 +11,7 @@
       "id": "f4d8b150-ed06-11ea-a252-c9a9ab49c201",
       "assessments": []
     },
-    {
-      "name": "Maryia",
-      "gender": "F",
-      "email": "maryia@simpson.com",
-      "password": "secret",
-      "address": "evergreen",
-      "height": "1.65",
-      "startingweight": "57",
-      "id": "65551dd0-edd7-11ea-83ab-e3e6368c4567",
-      "assessments": []
-    },
+    
     {
       "name": "Bartholomew Simpson",
       "gender": "m",
@@ -32,17 +22,6 @@
       "startingweight": "55",
       "id": "dded91a0-ede1-11ea-b5a1-311aefd8b3db",
       "assessments": []
-    },
-    {
-      "name": "Sideshow Bob",
-      "gender": "m",
-      "email": "sideshow@bob",
-      "password": "secret",
-      "address": "springfield",
-      "height": "1.80",
-      "startingweight": "60",
-      "id": "46abead0-eeb3-11ea-9a03-631cda8721d0",
-      "assessments": []
-    }
+    }    
   ]
 }

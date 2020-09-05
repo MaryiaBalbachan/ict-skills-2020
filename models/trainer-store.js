@@ -1,3 +1,4 @@
+//Model manages data from the trainer-store JSON file
 'use strict';
 
 const _ = require('lodash');

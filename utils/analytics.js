@@ -1,3 +1,5 @@
+//Utility used to create member analytics: bmi, bmi category, trend and determine whether the member 
+//is at idela body weight based on the latest assessment or starting weight if no assessments have been added.
 'use strict';
 
 const logger=require('./logger');
@@ -19,8 +21,7 @@ const analytics={
     else {
       const bmi = assessments[assessments.length-1].weight/((member.height)*(member.height));
       return Math.round(bmi);
-    }
-  
+    }  
   },  
   
   bmiCategory(id) {
@@ -51,14 +52,13 @@ const analytics={
     if(assessments.length>1){
       let weight1=parseInt(assessments[assessments.length-2].weight)
       logger.info("weight1 "+weight1)          
-      let weight2=parseInt(assessments[assessments.length-1].weight)
-      logger.info("weight2 "+weight2)
-      trend=weight1>weight2      
+      let weight0=parseInt(assessments[assessments.length-1].weight)
+      logger.info("weight0 "+weight0)
+      trend=weight1>weight0      
       //trend=parseInt(assessments[assessments.length-2].weight)>parseInt(assessments[assessments.length-1].weight)
       logger.info("checking trend "+trend);
     }
-     
-    
+    return trend;    
   },
   
   isIdealBodyWeight(id){
@@ -81,10 +81,10 @@ const analytics={
         } else if ((heightInInches <= 60) && (member.gender.toUpperCase()==="F") && (weight > 44) && (weight < 46)) {
           logger.info("true");           
             return true;
-        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 2) && (weight < idealWeightM + 2)) {
+        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 1) && (weight < idealWeightM + 1)) {
           logger.info("true");          
             return true;
-        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 2) && (weight < idealWeightF + 2)) {
+        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 1) && (weight < idealWeightF + 1)) {
           logger.info("true");           
             return true;       
         } else {
@@ -101,10 +101,10 @@ const analytics={
         } else if ((heightInInches <= 60) && (member.gender.toUpperCase()==="F") && (weight > 44) && (weight < 46)) {
           logger.info("true");
             return true;
-        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 2) && (weight < idealWeightM + 2)) {
+        } else if ((member.gender.toUpperCase()==="M") && (weight > idealWeightM - 1) && (weight < idealWeightM + 1)) {
           logger.info("true");
             return true;
-        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 2) && (weight < idealWeightF + 2)) {
+        } else if ((member.gender.toUpperCase()==="F") && (weight > idealWeightF - 1) && (weight < idealWeightF + 1)) {
           logger.info("true");  
             return true;       
         } else {

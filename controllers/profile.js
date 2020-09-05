@@ -1,3 +1,5 @@
+// Controller to render member profile page and allow to make changes to member information and save these
+// changes to the Member Store.
 "use strict";
 
 const logger = require("../utils/logger");
@@ -5,13 +7,13 @@ const accounts=require("./accounts");
 const memberStore=require("../models/member-store.js");
 
 const profile = {
+  
   index(request, response) {
     logger.info("profile rendering");
     const loggedInMember=accounts.getCurrentMember(request);
     const viewData = {
       title: "Member Profile",
-      member:memberStore.getMember(loggedInMember.id),
-      
+      member:memberStore.getMember(loggedInMember.id),      
     };
     response.render("profile", viewData);
   },
@@ -30,11 +32,8 @@ const profile = {
     }
     memberStore.updateMember(member, updateProfile);
     logger.info(updateProfile);
-    response.redirect('/profile');   
-    
-  },
-  
-  
+    response.redirect('/profile');      
+  },  
 };
 
 module.exports = profile;

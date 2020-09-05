@@ -1,3 +1,4 @@
+//Model manages data from the assessment-store JSON file
 'use strict';
 
 const _=require('lodash');
@@ -25,24 +26,18 @@ const assessmentStore={
     this.store.save();
   },
   
-  assessmentCount(memberid){
-    return assessmentStore.getMemberAssessments(memberid).length; 
-    
-  },
-  
+   
   removeAssessment(id) {
     const assessment = this.getAssessment(id);
     this.store.remove(this.collection, assessment);
     this.store.save();
   },  
   
-  
   addComment(comment,assessmentId){
     const assessment=this.getAssessment(assessmentId);
     assessment.comment=comment;
     this.store.save();
-    logger.info("attempting to save to store");
-    
+    logger.info("attempting to save to store");    
   },
 };
 
