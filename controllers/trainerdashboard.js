@@ -1,3 +1,6 @@
+//Controller to manage trainerdashboard. Displays trainer Dashboard listing all the members, 
+//allows to delete a member from the view and the Member Store,add a comment to an assessment and 
+// save it in the Assessment Store
 "use strict";
 
 const logger = require("../utils/logger");
@@ -7,7 +10,6 @@ const uuid=require('uuid');
 const accounts=require('./accounts.js');
 
 
-
 const trainerdashboard = {
   
   index(request, response) {
@@ -15,12 +17,9 @@ const trainerdashboard = {
     const memberId=request.params.id;
     const viewData = {
       title: "Trainer Dashboard",
-      member:memberStore.getAllMembers(),
-      assessmentCount:assessmentStore.assessmentCount(memberId),
-      
+      member:memberStore.getAllMembers(),       
     };
     logger.info("about to render",memberStore.getAllMembers()+viewData);
-    //logger.info(assessmentCount);
     response.render("trainerdashboard", viewData);
   },  
  
@@ -39,11 +38,8 @@ const trainerdashboard = {
     const comment=request.body.comment;
     assessmentStore.addComment(comment, assessmentId)
     logger.info("saving to assessmentStore");
-    response.redirect('/memberlist/'+memberId);
-    
-  }
-    
-  
+    response.redirect('/memberlist/'+memberId);    
+  },  
 };
 
 module.exports = trainerdashboard;
