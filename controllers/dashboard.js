@@ -37,7 +37,7 @@ const dashboard = {
         memberid: loggedInMember.id,
         id:uuid.v1(),
         date:new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
-        weight: request.body.weight,
+        weight: Number(request.body.weight),
         chest: request.body.chest,
         thigh: request.body.thigh,
         upperarm: request.body.upperarm,
@@ -45,7 +45,7 @@ const dashboard = {
         hips: request.body.hips,
         trend:analytics.trend(loggedInMember.id),
         comment:"",
-      };
+      };      
       assessmentStore.addAssessment(newAssessment);
       response.redirect('/dashboard');
   }, 
