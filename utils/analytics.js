@@ -55,11 +55,26 @@ const analytics={
       let weight0=parseInt(assessments[assessments.length-1].weight)
       logger.info("weight0 "+weight0)
       trend=weight1>weight0      
-      //trend=parseInt(assessments[assessments.length-2].weight)>parseInt(assessments[assessments.length-1].weight)
       logger.info("checking trend "+trend);
     }
     return trend;    
   },
+  
+//   trend(id){
+//     const member=memberStore.getMember(id);
+//     const assessments=assessmentStore.getMemberAssessments(id);    
+//     let trend="";
+//     if(assessments.length>=1){
+//       let weight1=parseInt(assessments[assessments.length-1].weight)
+//       logger.info("weight1 "+weight1)          
+//       let weight0=parseInt(member.startingweight)
+//       logger.info("weight0 "+weight0)
+//       trend=weight1<weight0      
+//       logger.info("checking trend "+trend);
+//     }
+//     return trend;    
+//   },    
+  
   
   isIdealBodyWeight(id){
     const member=memberStore.getMember(id);
