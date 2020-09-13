@@ -12,24 +12,19 @@ const profile=require('./controllers/profile.js');
 
 router.get("/about", about.index);
 
-//router.get("/",dashboard.index);
 
 router.get("/profile", profile.index);
 router.post("/profile/updateprofile", profile.updateMember);
 
 router.get("/dashboard", dashboard.index);
-router.get("/trainerdashboard", trainerdashboard.index);
+router.post('/dashboard/addassessment', dashboard.addAssessment);
+router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
+
 router.get('/memberlist/:id', memberlist.index);
 
-//router.post('/memberlist/addcomment/:id', memberlist.addComment);
+router.get("/trainerdashboard", trainerdashboard.index);
 router.post('/trainerdashboard/:memberid/addcomment/:id', trainerdashboard.addComment);
-
-router.get('/dashboard/deleteassessment/:id', dashboard.deleteAssessment);
 router.get('/trainerdashboard/deletemember/:id',trainerdashboard.deleteMember);
-
-router.post('/dashboard/addassessment', dashboard.addAssessment);
-//router.post('/trainerdashboard/addcomment/:memberId/:assessmentId', trainerdashboard.addComment);
-
 
 router.get('/', accounts.index);
 router.get('/login', accounts.login);

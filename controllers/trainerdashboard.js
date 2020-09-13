@@ -19,7 +19,7 @@ const trainerdashboard = {
       title: "Trainer Dashboard",
       member:memberStore.getAllMembers(),       
     };
-    logger.info("about to render",memberStore.getAllMembers()+viewData);
+    //logger.info("about to render",memberStore.getAllMembers()+viewData);
     response.render("trainerdashboard", viewData);
   },  
  
