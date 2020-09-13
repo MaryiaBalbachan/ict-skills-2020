@@ -23,7 +23,7 @@ const dashboard = {
       bmi:analytics.bmi(loggedInMember.id),  
       bmiCategory:analytics.bmiCategory(loggedInMember.id),
       isIdealBodyWeight:analytics.isIdealBodyWeight(loggedInMember.id),
-      trend:analytics.trend(loggedInMember.id),
+      //trend:analytics.trend(loggedInMember.id),
     };
     logger.info("about to render",memberStore);
     response.render("dashboard", viewData);

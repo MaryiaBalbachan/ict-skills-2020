@@ -2,7 +2,7 @@
   "memberCollection": [
     {
       "name": "Homer Simpson",
-      "gender": "male",
+      "gender": "m",
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "734 Evergreen Terrace",
@@ -11,17 +11,16 @@
       "id": "f4d8b150-ed06-11ea-a252-c9a9ab49c201",
       "assessments": []
     },
-    
     {
-      "name": "Bartholomew Simpson",
-      "gender": "m",
-      "email": "bart@simpson.com",
+      "name": "Lisa Simpson",
+      "gender": "F",
+      "email": "marge@simpson.com",
       "password": "secret",
-      "address": "credan",
-      "height": "1.6",
-      "startingweight": "55",
-      "id": "dded91a0-ede1-11ea-b5a1-311aefd8b3db",
+      "address": "734 Evergreen Terrace",
+      "height": "1.45",
+      "startingweight": "40",
+      "id": "15678020-f5e2-11ea-b081-592e5393c410",
       "assessments": []
-    }    
+    }
   ]
 }

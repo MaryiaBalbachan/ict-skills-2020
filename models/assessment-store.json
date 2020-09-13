@@ -15,19 +15,6 @@
     },
     {
       "memberid": "dded91a0-ede1-11ea-b5a1-311aefd8b3db",
-      "id": "5ff5cd20-f06c-11ea-906f-b7f4716e9725",
-      "date": "2020-09-06 18:11:24",
-      "weight": 55,
-      "chest": "81",
-      "thigh": "50",
-      "upperarm": "30",
-      "waist": "60",
-      "hips": "81",
-      "trend": true,
-      "comment": "Keep up the good work!"
-    },
-    {
-      "memberid": "dded91a0-ede1-11ea-b5a1-311aefd8b3db",
       "id": "80eea880-f06c-11ea-906f-b7f4716e9725",
       "date": "2020-09-06 18:12:19",
       "weight": 57,
@@ -37,7 +24,7 @@
       "waist": "63",
       "hips": "85",
       "trend": false,
-      "comment": "Don't let your goals slip away!"
+      "comment": "Keep it up"
     },
     {
       "memberid": "f4d8b150-ed06-11ea-a252-c9a9ab49c201",
@@ -63,7 +50,7 @@
       "waist": "84",
       "hips": "102",
       "trend": true,
-      "comment": ""
+      "comment": "Keep up the good work!"
     },
     {
       "memberid": "f4d8b150-ed06-11ea-a252-c9a9ab49c201",
